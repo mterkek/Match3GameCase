@@ -1,6 +1,17 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript1 : MonoBehaviour
+namespace Grid
+{
+    public enum ETileType
+    {
+        Apple,
+        Orange,
+        Banana,
+        Watermelon
+    }
+}
+
+public class ETileType : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

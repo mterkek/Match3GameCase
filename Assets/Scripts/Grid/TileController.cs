@@ -1,16 +1,27 @@
 using UnityEngine;
 
-public class TileController : MonoBehaviour
+namespace Grid
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /// <summary>
+    /// Her tile örneğiyle ilişkilendirilir.
+    /// </summary>
+    public class TileController : MonoBehaviour
     {
-        
-    }
+        public ETileType TileType { get; private set; }
+        private Vector2Int gridPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Initialize(ETileType type, Vector2Int gridPos)
+        {
+            TileType = type;
+            gridPosition = gridPos;
+            transform.position = BoardManager.Instance.GetCell(gridPos).worldPosition;
+        }
+
+        public void SetGridPosition(Vector2Int newPos)
+        {
+            gridPosition = newPos;
+        }
+
+        public Vector2Int GridPosition => gridPosition;
     }
 }

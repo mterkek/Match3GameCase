@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class TileInfo : MonoBehaviour
+namespace Grid
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /// <summary>
+    /// Hücreye ait ekstra veriyi tutar. Şimdilik boş, ileride genişleyebilir.
+    /// </summary>
+    public class TileInfo : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Gerektiğinde bu sınıf genişletilebilir.
     }
 }
