@@ -43,7 +43,7 @@ public class Pool : Singleton<Pool>
     {
         if (_poolDictionary.ContainsKey(poolType) && _poolDictionary[poolType].Count > 0)
         {
-            var obj = _poolDictionary[poolType].Dequeue();
+            GameObject obj = _poolDictionary[poolType].Dequeue();
             obj.SetActive(true);
             return obj;
         }
